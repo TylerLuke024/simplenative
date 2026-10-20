@@ -11,8 +11,8 @@ const Stack = createNativeStackNavigator();
 function HomeScreen({ navigation }) {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Home</Text>
-      <Text style={styles.body}>This is the Home tab.</Text>
+      <Text style={styles.title}>Ice Cream</Text>
+      <Text style={styles.body}>This is the Ice Cream tab.</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
@@ -25,7 +25,7 @@ function DetailsScreen() {
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>Details</Text>
-      <Text style={styles.body}>This screen is pushed onto the Home stack.</Text>
+      <Text style={styles.body}>This screen is pushed onto the Ice Cream stack.</Text>
     </View>
   );
 }
@@ -33,8 +33,8 @@ function DetailsScreen() {
 function SettingsScreen({ navigation }) {
   return (
     <View style={styles.screen}>
-      <Text style={styles.title}>Settings</Text>
-      <Text style={styles.body}>This is the Settings tab.</Text>
+      <Text style={styles.title}>Hot Coffee</Text>
+      <Text style={styles.body}>This is the Hot Coffee tab.</Text>
       <Button
         title="Go to About"
         onPress={() => navigation.navigate('About')}
@@ -47,7 +47,7 @@ function AboutScreen() {
   return (
     <View style={styles.screen}>
       <Text style={styles.title}>About</Text>
-      <Text style={styles.body}>This screen is pushed onto the Settings stack.</Text>
+      <Text style={styles.body}>This screen is pushed onto the Hot Coffee stack.</Text>
     </View>
   );
 }
@@ -75,8 +75,8 @@ export default function App() {
     <>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="HomeTab" component={HomeStack} />
-          <Tab.Screen name="SettingsTab" component={SettingsStack} />
+          <Tab.Screen name="Ice Cream" component={HomeStack} />
+          <Tab.Screen name="Hot Coffee" component={SettingsStack} />
         </Tab.Navigator>
       </NavigationContainer>
       <StatusBar style="auto" />
